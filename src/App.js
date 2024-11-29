@@ -1,9 +1,22 @@
+import logo from "./logo.svg";
+import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Header from "./pages/header/Header";
 import {
   BrowserRouter as Router,
   Route,
   Routes,
   Navigate,
 } from "react-router-dom";
+import NoMatch from "./pages/noMatch/NoMatch";
+import Dashboard from "./pages/dashboard/dashboard";
+import PostUser from "./pages/employee/PostUser";
+import UpdateUser from "./pages/employee/UpdateUser";
+import Login from "./Login";
+import Register from "./Register";
+import AdminPage from "./AdminPage";
+import UserPage from "./UserPage";
+import ViewUser from "./pages/employee/ViewUser";
 
 function App() {
   return (
