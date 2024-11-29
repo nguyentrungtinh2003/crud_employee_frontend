@@ -12,7 +12,6 @@ import Register from "./Register";
 import AdminPage from "./AdminPage";
 import UserPage from "./UserPage";
 import ViewUser from "./pages/employee/ViewUser";
-import Test from "./pages/Test";
 
 function App() {
   return (
@@ -29,7 +28,6 @@ function App() {
         <Route path="/user" element={<UserPage />} />
         <Route path="/*" element={<NoMatch />} />
         <Route path="*" element={<Navigate to="/login" />} />
-        <Route path="/test" element={<Test></Test>} />
       </Routes>
     </>
   );
