@@ -46,7 +46,7 @@ const Dashboard = () => {
     <div className="container mt-5">
       <h1 className="text-center mb-4">Employee List</h1>
       <button className="btn btn-primary mb-4">
-        <a className="navbar-brand" href="/employee">
+        <a className="navbar-brand" href="/#/employee">
           Post Employee
         </a>
       </button>
