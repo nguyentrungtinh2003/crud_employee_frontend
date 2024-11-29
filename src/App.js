@@ -2,7 +2,7 @@ import logo from "./logo.svg";
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import Header from "./pages/header/Header";
-import { Route, Routes, Navigate } from "react-router-dom"; // Import Navigate for redirecting
+import { BrowserRouter as Route, Routes, Navigate } from "react-router-dom"; // Import Navigate for redirecting
 import NoMatch from "./pages/noMatch/NoMatch";
 import Dashboard from "./pages/dashboard/dashboard";
 import PostUser from "./pages/employee/PostUser";
@@ -19,7 +19,7 @@ function App() {
       <Header />
       <Routes>
         <Route path="/" element={<Dashboard />} />
-        <Route path="/#/employee" element={<PostUser />} />
+        <Route path="/employee" element={<PostUser />} />
         <Route path="/employee/:id" element={<UpdateUser />} />
         <Route path="/view/:id" element={<ViewUser />} />
         <Route path="/login" element={<Login />} />
