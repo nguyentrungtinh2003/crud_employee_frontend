@@ -1,43 +1,25 @@
-import logo from "./logo.svg";
-import "./App.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Header from "./pages/header/Header";
 import {
   BrowserRouter as Router,
   Route,
-  Switch,
+  Routes,
   Navigate,
-} from "react-router-dom"; // Import Navigate for redirecting
-import NoMatch from "./pages/noMatch/NoMatch";
-import Dashboard from "./pages/dashboard/dashboard";
-import PostUser from "./pages/employee/PostUser";
-import UpdateUser from "./pages/employee/UpdateUser";
-import Login from "./Login";
-import Register from "./Register";
-import AdminPage from "./AdminPage";
-import UserPage from "./UserPage";
-import ViewUser from "./pages/employee/ViewUser";
+} from "react-router-dom";
 
 function App() {
   return (
-    <>
-      <Header />
-      <Router>
-        <Switch>
-          <Route path="/" element={<Dashboard />} />
-          <Route path="/employee" element={<PostUser />} />
-          <Route path="/employee/:id" element={<UpdateUser />} />
-          <Route path="/view/:id" element={<ViewUser />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/register" element={<Register />} />
-          <Route path="/admin" element={<AdminPage />} />
-          <Route path="/user" element={<UserPage />} />
-          <Route path="/*" element={<NoMatch />} />
-          <Route path="*" element={<Navigate to="/login" />} />
-        </Switch>
-      </Router>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Dashboard />} />
+        <Route path="/employee" element={<PostUser />} />
+        <Route path="/employee/:id" element={<UpdateUser />} />
+        <Route path="/view/:id" element={<ViewUser />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/admin" element={<AdminPage />} />
+        <Route path="/user" element={<UserPage />} />
+        <Route path="/*" element={<NoMatch />} />
+        <Route path="*" element={<Navigate to="/login" />} />
+      </Routes>
+    </Router>
   );
 }
-
-export default App;
